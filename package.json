@@ -1,8 +1,9 @@
 {
   "name": "@claude/cursor-harness-mcp",
   "version": "0.1.0",
-  "description": "MCP harness for Claude-orchestrated Cursor subagents.",
+  "description": "Dispatch Cursor CLI subagents from Claude Code (or any MCP-compatible client).",
   "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
   "bin": {
     "cursor-harness-mcp": "dist/server.js"
   },
@@ -10,7 +11,8 @@
   "files": [
     "dist",
     "plugin",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc",

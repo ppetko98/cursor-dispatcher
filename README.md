@@ -244,4 +244,6 @@ tests/
 
 ## License
 
-MIT (see repo root when a `LICENSE` file is added).
+[PolyForm Noncommercial 1.0.0](./LICENSE) — free for personal, research, educational, hobbyist, and other noncommercial use (including noncommercial open-source projects, charities, and government/academic institutions). **Commercial use, hosting-as-a-service, and repackaging for resale are not permitted.** If you want to use this in a for-profit setting, open an issue to discuss a commercial license.
+
+Note: "noncommercial" here does not meet the OSI's Open Source Definition (which forbids field-of-use restrictions); this is a source-available license.
