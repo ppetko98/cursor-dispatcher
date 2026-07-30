@@ -1,0 +1,11 @@
+{
+  "name": "cursor-harness-local",
+  "owner": { "name": "cursor-harness" },
+  "plugins": [
+    {
+      "name": "cursor-harness",
+      "source": "./plugin",
+      "description": "MCP harness for Claude-orchestrated Cursor subagents."
+    }
+  ]
+}

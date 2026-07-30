@@ -1,0 +1,24 @@
+{
+  "name": "cursor-harness",
+  "version": "0.1.0",
+  "description": "MCP harness for Claude-orchestrated Cursor subagents.",
+  "mcpServers": {
+    "cursor-harness": {
+      "command": "node",
+      "args": ["${pluginDir}/../dist/server.js"],
+      "env": {}
+    }
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PLUGIN_ROOT/hooks/on-user-prompt.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}
