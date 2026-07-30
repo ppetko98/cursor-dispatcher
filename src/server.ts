@@ -171,7 +171,7 @@ let TOOLS: unknown[] = [];
 
 async function main(): Promise<void> {
   const server = new Server(
-    { name: "cursor-harness", version: "0.1.0" },
+    { name: "cursor-dispatcher", version: "0.1.0" },
     { capabilities: { tools: {}, resources: { subscribe: true, listChanged: true }, logging: {} } },
   );
   bindServer(server);

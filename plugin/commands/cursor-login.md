@@ -1,5 +1,5 @@
 ---
-description: Authenticate the local cursor-agent CLI so cursor-harness can spawn subagents.
+description: Authenticate the local cursor-agent CLI so cursor-dispatcher can spawn subagents.
 ---
 
 The user invoked `/cursor-login`. Do this:
@@ -20,6 +20,6 @@ The user invoked `/cursor-login`. Do this:
      ```
      in the shell that will start Claude Code (or add it to their shell rc). Then restart Claude Code so the MCP server picks up the env var.
 
-3. After they've done one of the two, remind them to toggle `cursor-harness` off/on in `/mcp` (or restart Claude Code) so the auth-status cache in the MCP server refreshes, then they can call `spawn_subagent` again.
+3. After they've done one of the two, remind them to toggle `cursor-dispatcher` off/on in `/mcp` (or restart Claude Code) so the auth-status cache in the MCP server refreshes, then they can call `spawn_subagent` again.
 
 Do NOT try to run `cursor-agent login` via Bash yourself — it needs a real TTY and browser and will hang or fail if you invoke it in a non-interactive shell.

@@ -1,11 +1,11 @@
 {
-  "name": "cursor-harness-local",
-  "owner": { "name": "cursor-harness" },
+  "name": "cursor-dispatcher",
+  "owner": { "name": "ppetko98" },
   "plugins": [
     {
-      "name": "cursor-harness",
+      "name": "cursor-dispatcher",
       "source": "./plugin",
-      "description": "MCP harness for Claude-orchestrated Cursor subagents."
+      "description": "Dispatch Cursor CLI subagents from Claude Code (or any MCP-compatible client)."
     }
   ]
 }

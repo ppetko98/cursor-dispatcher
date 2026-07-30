@@ -1,6 +1,6 @@
 ---
 name: cursor-subagent
-description: Delegate a bounded coding task to a Cursor subagent via the cursor-harness MCP server without blocking the chat.
+description: Delegate a bounded coding task to a Cursor subagent via the cursor-dispatcher MCP server without blocking the chat.
 ---
 
 # Cursor Subagent

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// UserPromptSubmit hook for cursor-harness. Runs before each of the user's
+// UserPromptSubmit hook for cursor-dispatcher. Runs before each of the user's
 // prompts hits Claude. Scans the harness runs directory for terminal-status
 // transitions in runs spawned by this Claude Code session and emits a short
 // line per new transition to stdout — Claude Code injects that into the turn
@@ -98,7 +98,7 @@ async function main() {
 
   if (messages.length) {
     process.stdout.write(
-      `[cursor-harness] subagent updates since last turn:\n${messages
+      `[cursor-dispatcher] subagent updates since last turn:\n${messages
         .map((m) => `- ${m}`)
         .join("\n")}\n`,
     );
@@ -108,6 +108,6 @@ async function main() {
 
 main().catch((err) => {
   // Never fail loudly — a broken hook shouldn't wedge Claude's prompt path.
-  process.stderr.write(`[cursor-harness hook] ${err?.message ?? String(err)}\n`);
+  process.stderr.write(`[cursor-dispatcher hook] ${err?.message ?? String(err)}\n`);
   process.exit(0);
 });

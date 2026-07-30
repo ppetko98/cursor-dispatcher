@@ -1,9 +1,9 @@
 {
-  "name": "cursor-harness",
+  "name": "cursor-dispatcher",
   "version": "0.1.0",
-  "description": "MCP harness for Claude-orchestrated Cursor subagents.",
+  "description": "Dispatch Cursor CLI subagents from Claude Code (or any MCP-compatible client).",
   "mcpServers": {
-    "cursor-harness": {
+    "cursor-dispatcher": {
       "command": "node",
       "args": ["${pluginDir}/../dist/server.js"],
       "env": {}

@@ -1,4 +1,4 @@
-# cursor-harness
+# cursor-dispatcher
 
 An MCP server + Claude Code plugin that lets **Claude spawn Cursor subagents** as async, bounded workers.
 
@@ -31,25 +31,35 @@ Claude delegates a task, gets a `run_id` back immediately, and continues talking
 
 ## Install
 
-Clone the repo, build, and install as a Claude Code plugin from a local marketplace:
+### Public (via GitHub marketplace)
+
+From inside Claude Code:
+```
+/plugin marketplace add ppetko98/cursor-dispatcher
+/plugin install cursor-dispatcher@cursor-dispatcher
+/reload-plugins
+```
+That's it — Claude Code clones the repo, wires up the MCP server, hook, skill, and slash command. You still need `cursor-agent` installed on `$PATH` and authenticated (see `/cursor-login`).
+
+### Local (for dev)
 
 ```bash
-git clone https://github.com/ppetko98/claude-cursor-harness.git
-cd claude-cursor-harness
+git clone https://github.com/ppetko98/cursor-dispatcher.git
+cd cursor-dispatcher
 npm install
 npm run build
 
 # From Claude Code:
-/plugin marketplace add /absolute/path/to/claude-cursor-harness
-/plugin install cursor-harness@cursor-harness-local
+/plugin marketplace add /absolute/path/to/cursor-dispatcher
+/plugin install cursor-dispatcher@cursor-dispatcher
 /reload-plugins
 ```
 
 Then verify:
 ```
-/mcp                     # cursor-harness should be listed
+/mcp                     # cursor-dispatcher should be listed
 /hooks                   # UserPromptSubmit → on-user-prompt.mjs
-Skill: cursor-harness:cursor-subagent
+Skill: cursor-dispatcher:cursor-subagent
 Slash: /cursor-login
 ```
 
@@ -57,7 +67,7 @@ Slash: /cursor-login
 
 If you only want the MCP tools without the hook + skill:
 ```bash
-claude mcp add cursor-harness -- node /absolute/path/to/claude-cursor-harness/dist/server.js
+claude mcp add cursor-dispatcher -- node /absolute/path/to/cursor-dispatcher/dist/server.js
 ```
 
 ---
@@ -92,7 +102,7 @@ Model must come from an allowlist (default: `auto, gpt-5.2, claude-opus-5-thinki
 
 ## MCP tools
 
-All tools live under the `cursor-harness` MCP server.
+All tools live under the `cursor-dispatcher` MCP server.
 
 | Tool | Purpose |
 |---|---|

@@ -22,7 +22,7 @@ export function notifyMessage(
   void server
     .notification({
       method: "notifications/message",
-      params: { level, logger: `cursor-harness:${runId}`, data: text },
+      params: { level, logger: `cursor-dispatcher:${runId}`, data: text },
     })
     .catch(() => {});
 }
