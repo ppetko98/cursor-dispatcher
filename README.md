@@ -1,5 +1,7 @@
 # cursor-dispatcher
 
+[![License: PolyForm Noncommercial 1.0](https://img.shields.io/badge/license-PolyForm%20NC%201.0-blue.svg)](./LICENSE)
+
 An MCP server + Claude Code plugin that lets **Claude spawn Cursor subagents** as async, bounded workers.
 
 Claude delegates a task, gets a `run_id` back immediately, and continues talking to the user. When the subagent finishes, a plugin hook injects the outcome into Claude's next turn — no polling, no blocked chat.
